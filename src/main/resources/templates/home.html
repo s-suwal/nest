@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th ="http://www.thymeleaf.org">
+<html lang="eng" xmlns:th ="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale= 1, shrink-to-fit=no">
@@ -9,11 +9,17 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Page Title</title>
 </head>
-<body>
+<body style="background-color: #cfe0e8">
+<!--        style="-->
+<!--      background: url(nest.jpg);-->
+<!--      background-repeat: no-repeat;-->
+<!--      background-size: 100% 100%;-->
+<!--      background-attachment: fixed;-->
+<!--    "-->
 
-<h1>
-    test
-</h1>
+<div>
+    <div th:replace="layouts :: navbar">This is the test  </div>
+</div>
 
 </body>
 </html>
