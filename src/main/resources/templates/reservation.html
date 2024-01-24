@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th ="http://www.thymeleaf.org">
 <head th:replace="layouts :: heading"></head>
-<body>
+<body style="
+      background-image: url(C:\Users\Suraj\Documents\Spring Boot\nest\src\main\resources\templates\nest.jpg);
+<!--      background-color: #47aede;-->
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+    ">
 <nav th:replace="layouts :: navbar"></nav>
-<form class="row g-3" style=" margin: 5px 10px;">
-    <div class="col-auto">
-        <input type="date">
-<!--        <label for="guestsnumber">Number of Guests:</label>-->
-        <input type="number" placeholder="Number of guests" id="guestsnumber">
-        <button type="button" class="btn btn-primary">Check Availability</button>
+<div  >
+    <form class="row g-3" style=" margin: 5px 10px;">
+        <div class="col-auto">
+            <input type="date">
+            <input type="number" placeholder="Number of guests" id="guestsnumber">
+            <button type="button" class="btn btn-primary">Check Availability</button>
 
-    </div>
+        </div>
 
-</form>
+    </form>
+</div>
+
 
 </body>
 </html>

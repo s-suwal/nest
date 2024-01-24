@@ -11,13 +11,12 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Guest {
+public class Booking {
+    private Long bookingID;
     private Long guestID;
-    private String guestFirstName;
-    private String guestLastName;
-    private String email;
-    private String address;
-    private String phone;
-    private Date dateOfBirth;
+    private String roomNumber;
+    private Date checkinDate;
+    private Date checkOutDate;
+    private Float totalPrice;
 
 }
