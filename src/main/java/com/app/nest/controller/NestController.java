@@ -11,10 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/nest")
 public class NestController {
 
-    @GetMapping("/home")
+    @GetMapping("")
     public String nestHome(Model model){
         model.addAttribute("message");
         return "reservation";
+    }
+
+    @GetMapping("/contactus")
+    public String contactUs(Model model){
+        model.addAttribute("Contact Us");
+        return "contactus";
     }
 
 }
