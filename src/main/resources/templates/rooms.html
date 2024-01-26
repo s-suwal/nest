@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th ="http://www.thymeleaf.org">
+<head th:replace="layouts:: heading">
+
+</head>
+<body style="background-color: #cfe0e8">
+<div>
+    <div th:replace="layouts :: navbar"></div>
+    <div class="container">
+        <form action="nest/rooms/save" th:object="${}" method="POST">
+<!--            <input type="text" placeholder="Number of Beds" th:field="${aRoom.numberOfBeds}">-->
+<!--            <input type="text" placeholder="" th:field="${aRoom.typeId}">-->
+<!--            <input type="text" placeholder="status" th:field="${aRoom.status}">-->
+<!--            <button type="submit">-->
+<!--                Update Room-->
+<!--            </button>-->
+        </form>
+        </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Room Number</th>
+                <th>Number of Beds</th>
+                <th>Room Type</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="aRoom : ${aRoom}">
+            <td th:text="${aRoom.roomNumber}"></td>
+            <td th:text="${aRoom.numberOfBeds}"></td>
+            <td th:text="${aRoom.status}"></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

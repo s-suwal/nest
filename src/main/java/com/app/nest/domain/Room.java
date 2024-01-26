@@ -1,6 +1,8 @@
 package com.app.nest.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Room {
-    private String roomNumber;
+    @Id
+    @GeneratedValue
+    private Long roomNumber;
     private Long hotelID;
     private String typeID;
     private String status;
+    private Long numberOfBeds;
 }
