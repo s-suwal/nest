@@ -1,17 +1,19 @@
 package com.app.nest.domain;
 
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Id;
+import lombok.*;
 
 import java.util.Date;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class Booking {
+	@Id
     private Long bookingID;
     private Long guestID;
     private String roomNumber;

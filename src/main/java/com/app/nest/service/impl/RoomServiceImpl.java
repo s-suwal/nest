@@ -11,24 +11,25 @@ import java.util.List;
 
 @Service
 public class RoomServiceImpl implements RoomService {
-    @Autowired
-    RoomRepository roomRepository;
+
+   private RoomRepository roomRepository;
+
+   public RoomServiceImpl(RoomRepository roomRepository){
+       this.roomRepository=roomRepository;
+   }
 
     @Override
     public List<Room> getAllRooms() {
        List<Room> room = new ArrayList<>();
        try{
-           room = roomRepository.findAll();
+           room = (List<Room>) roomRepository.findAll();
        }catch (Exception e){
-    throw new RuntimeException("Something went wrong");}
+            throw new RuntimeException("Something went wrong");}
         return room;
     }
 
     @Override
-    public List<Room> createRooms(Room room) {
-        List<Room> roomList = new ArrayList<>();
-        roomList.add(room);
-        roomList = (List<Room>) roomRepository.save(room);
-        return roomList;
+    public Room createRooms(Room room) {
+       return roomRepository.save(room);
     }
 }
